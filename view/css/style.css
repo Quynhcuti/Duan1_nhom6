@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    border: 1px solid black;
+    height: auto;
+    width: 1440px;
+}
+
+
+header{
+    width: 1222px;
+    height: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header>form>.search{
+    width: 600px;
+    height: 45px;
+    border-radius: 25px;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 58px;
+}
+.icon1{
+    font-size: 30px;
+    text-align: center;
+}
+.icon1 a{
+    text-decoration: none;
+    color: black;
+}
+.text a{
+    text-decoration: none;
+    color: black;
+}
+.cart{
+    margin-left: 38px;
+}
+.logo img{
+    width: 140px;
+    height: 95px;
+}
+nav{
+    width: 1222px;
+    height: 74px;
+}
+nav>ul{
+    display: flex;
+    justify-content: center;
+}
+.category{
+    display: flex;
+    justify-content: space-between;
+}
+.cate{
+    height: 430px;
+    width: 326px;
+    border: 1px solid black;
+    
+}
+.cate img{
+    height: 288px;
+    width: 326px;
+}
+.cate p{
+    margin-top: 55px;
+    margin-bottom: 58px;
+    text-align: center;
+}
+.product{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 20px;
+    display:  flex;
+    justify-content: space-between;
+}
+.product img{
+    width: 100%;
+    height: 194px;
+    border-radius: 20px;
+}
+.pro{
+    height: 360px;
+    width: 288px;
+}
+.pro .name{
+    font-size: 10px;
+    margin-top: 20px;
+    margin-left: 12px;
+    margin-bottom: 20px;
+}
+.pro>a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 12px;
+}
+.price{
+    display: flex;
+    margin-top: 35px;
+    margin-left: 12px;
+
+
+}
+.price>.giam{
+    margin-left: 35px;
+    text-decoration: line-through;
+}
+
+.boxcontent{
+    padding: 20px;
+    border: 1px solid black;
+    width: 80%;
+    height: auto;
+}
+.row{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.row>input{
+    width: 100%;
+    height: 50px;
+    padding: 5px 5px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.form-signin{
+    padding-left: 10px;
+}
+.button{
+    text-align: center;
+
+    margin-top: px;
+}
+
+.button>input{
+    width: 150px;
+    height: 40px;
+    margin-right: 40px;
+    background-color: #C0336E;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
