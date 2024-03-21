@@ -6,8 +6,6 @@
 
 .boxcenter {
   width: 1440px;
-  align-items: center;
-  justify-content: center;
 }
 .row {
   float: left;
@@ -95,7 +93,7 @@ nav ul {
   height: 74px;
   list-style-type: none;
   /* background-color:#FF3434; */
-  background-color: #C0336E;
+  background-color: #c0336e;
   display: flex;
 }
 nav ul li {
@@ -170,13 +168,13 @@ footer .row-1 .logo img {
   color: #d9d9d9;
 }
 
-.row-2 .row-2_2 p{
+.row-2 .row-2_2 p {
   margin: 10px 0;
   color: #d9d9d9;
 }
-.row-2 .row-2_3 p{
+.row-2 .row-2_3 p {
   margin: 10px 0;
-  
+
   color: #d9d9d9;
 }
 
@@ -193,7 +191,8 @@ footer .row-1 .logo img {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -215,8 +214,9 @@ footer .row-1 .logo img {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -251,7 +251,8 @@ footer .row-1 .logo img {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -262,67 +263,146 @@ footer .row-1 .logo img {
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /* slideshow */
 
-.spmoi-phukien{
+.spmoi-phukien {
   display: flex;
 }
-.spmoi-phukien .spmoi{
+.spmoi-phukien .spmoi {
   margin-left: 108px;
 }
-.spmoi-phukien .spmoi h2{
+.spmoi-phukien .spmoi h2 {
   text-align: center;
   font-style: italic;
   margin-bottom: 40px;
   margin-top: 40px;
 }
-.spmoi-phukien .spmoi p{
+.spmoi-phukien .spmoi p {
   text-align: center;
 }
-.spmoi-phukien .phukien{
+.spmoi-phukien .phukien {
   margin-right: 108px;
 }
-.spmoi-phukien .phukien h2{
+.spmoi-phukien .phukien h2 {
   text-align: center;
   font-style: italic;
   margin-bottom: 40px;
   margin-top: 40px;
 }
-.spmoi-phukien .phukien p{
+.spmoi-phukien .phukien p {
   text-align: center;
 }
-.button-muangay{
+.button-muangay {
   font-size: 12px;
   width: 135.3px;
   height: 56.76px;
-  border: 1px solid #F5F5F5;
-  background-color: #FFFFFF;
+  border: 1px solid #f5f5f5;
+  background-color: #ffffff;
   margin-left: 209px;
   margin-top: 40px;
   margin-bottom: 113px;
   opacity: 0.7;
   transition: 0.3s;
 }
-.button-muangay:hover{
-  background-color: #F5F5F5;
+.button-muangay:hover {
+  background-color: #f5f5f5;
   opacity: 2;
 }
-.danhmucsp{
+.danhmucsp {
   margin-bottom: 158px;
 }
-.danhmucsp h2{
+.danhmucsp h2 {
   font-size: 48px;
   text-align: center;
   margin-bottom: 34px;
 }
-.box-dmsp{
+.box-dmsp {
   display: flex;
 }
-.box-dmsp .sp>h3{
+.box-dmsp .sp > h3 {
   font-size: 48px;
   text-align: center;
 }
+.box-giohang {
+  width: 1222px;
 
+  margin-top: 29px;
+  display: block;
+}
+.box-giohang > h2 {
+  width: 1222px;
+  padding: 10px;
+  border-bottom: 1px solid #cacaca;
+}
+.box-giohang table {
+  margin-top: 66px;
+  width: 1066px;
+  height: auto;
+  border-collapse: collapse;
+  margin-bottom: 42px;
+}
+.box-giohang table th {
+  border-bottom: 1px solid #cacaca;
+}
+.box-giohang table tr td img{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.box-giohang table th:nth-child(2) {
+  width: 30%;
+}
+.box-giohang table th:nth-child(3) {
+  width: 30%;
+}
+.box-giohang table th:nth-child(4) {
+  width: 30%;
+  
+}
+.box-giohang table td {
+  text-align: center;
+}
+.button-xemthemsp{
+  width: 217px;
+  height: 42px;
+  font-size: 12px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  opacity: 1;
+  transition: 0.3s;
+  margin-left: 108px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.button-xemthemsp:hover{
+  background-color: #D9D9D9;
+  opacity: 2;
+}
+.thanhtien{
+  float: right;
+  display: flex;
+  position: relative;
+  top: 50%;
+  right: 30%;
+}
+.button-thanhtoan{
+  margin-left: 972px;
+  width: 172px;
+  height: 40px;
+  font-size: 12px;
+  border-radius: 10px;
+  background-color: #D9D9D9;
+  opacity: 1;
+  transition: 0.3s;
+  margin-bottom: 34px;
+}
+.button-thanhtoan:hover{
+  background-color: #FFFFFF;
+  opacity: 2;
+}
