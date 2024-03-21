@@ -93,7 +93,7 @@ nav ul {
   height: 74px;
   list-style-type: none;
   /* background-color:#FF3434; */
-  background-color: #C0336E;
+  background-color: #c0336e;
   display: flex;
 }
 nav ul li {
@@ -168,12 +168,160 @@ footer .row-1 .logo img {
   color: #d9d9d9;
 }
 
-.row-2 .row-2_2 p{
+.row-2 .row-2_2 p {
   margin: 10px 0;
   color: #d9d9d9;
 }
-.row-2 .row-2_3 p{
+.row-2 .row-2_3 p {
   margin: 10px 0;
-  
+
   color: #d9d9d9;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* slideshow */
+.spmoi-phukien {
+  display: flex;
+}
+.spmoi h2 {
+  font-size: 45px;
+}
+.phukien h2 {
+  font-size: 45px;
+}
+.spmoi h2,
+p {
+  text-align: center;
+  margin-top: 40px;
+}
+.phukien h2,
+p {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.spmoi > h2,
+.phukien > h2 {
+  font-style: italic;
+}
+.button-muangay {
+  width: 135.3px;
+  height: 56.76px;
+  border: 1px solid #f5f5f5;
+  background-color: #ffffff;
+  opacity: 0.6;
+  transition: 0.5s;
+  margin-left: 209px;
+  margin-top: 40px;
+}
+.button-muangay:hover {
+  opacity: 1;
+  background-color: #f5f5f5;
+}
+.danhmucsp > h2 {
+  font-size: 48px;
+  text-align: center;
+}
+.danhmucsp .sp {
+  display: block;
+  margin-left: 160px;
+}
+.danhmucsp .sp h3 {
+  font-size: 48px;
+  margin-left: 115px;
+  margin-top: 46px;
+}
+.danhmucsp .box-dmsp {
+  display: block;
 }
