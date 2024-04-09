@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxcontent {
+  padding: 20px;
+  border: 1px solid black;
+  width: 80%;
+}
+.row {
+  float: left;
+  width: 100%;
+}
+.mb {
+  margin-bottom: 10px;
+}
+
+
+.mb20 {
+  margin-bottom: 20px;
+}
+.title-ctdh {
+  display: flex;
+}
+.contents_info_vch {
+  display: flex;
+}
+.contents_info {
+  padding: 10px;
+  border: 1px solid black;
+  float: left;
+  width: 65%;
+  height: auto;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #edf0f5;
+  border: none;
+}
+.contents_info > p {
+  margin-bottom: 10px;
+}
+.contents_vch > p {
+  margin-bottom: 10px;
+}
+.contents_vch {
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: #edf0f5;
+  padding: 10px;
+  width: 35%;
+  height: auto;
+  margin-left: 20px;
+}
+.form_content {
+  background-color: #edf0f5;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  /* border: 1px solid red; */
+  margin-bottom: 20px;
+}
+.contents1 {
+  display: flex;
+  font-size: 18px;
+}
+.contents_img {
+  float: left;
+  margin-left: 2px;
+}
+.content_ten_sl {
+  float: left;
+  margin-right: 56%;
+  margin-left: 40px;
+}
+.contents_sl {
+  float: left;
+  margin-right: 20px;
+}
+.contents_tt {
+  float: right;
+  margin-right: 2px;
+}
+.contents_button1 {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 0.5px solid black;
+  padding: 30px;
+}
+.contents_button1 button {
+  
+  padding: 10px;
+  border: 1px solid red;
+  background-color: white;
+  color: red;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.contents_button button:hover {
+  opacity: 2;
+  background-color: #c0336e;
+  color: white;
+}
+.title-left,
+.contents_vch > p,
+.contents_info > p:first-child,
+.title-ctdh_dh {
+  font-weight: bold;
+  font-size: 22px;
+}
+.title-ctdh_nh {
+  margin-left: 10px;
+  font-size: 22px;
+  margin-right: 400px;
+}
