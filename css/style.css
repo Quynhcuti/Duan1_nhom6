@@ -630,3 +630,15 @@ footer .row-1 .logo img {
 .frmcontent input[type="reset"]:hover {
   background-color: #ccc;
 }
+.billsearch{
+  margin-left: 108px;
+}
+.billsearch input[type="text"],
+.billsearch input[type="submit"]{
+  border-radius: 5px;
+  height: 30px;
+
+}
+.billsearch input[type="submit"]{
+  background: none;
+}

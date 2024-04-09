@@ -283,9 +283,7 @@
             });
         </script>
         <div class="binhluan">
-            <?php
-
-            ?>
+            
         </div>
         <center>
             <h2>SẢN PHẨM LIÊN QUAN</h2>

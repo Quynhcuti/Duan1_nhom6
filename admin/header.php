@@ -17,7 +17,9 @@
                 <li><a href="index.php?act=home">Trang chủ</a></li>
                 <li><a href="index.php?act=addcate">Danh mục</a></li>
                 <li><a href="index.php?act=addpro">Hàng hóa</a></li>
-                <li><a href="index.php?act=dskh">Khách hàng</a></li>
+                <li><a href="index.php?act=listuser">Khách hàng</a></li>
+                <li><a href="index.php?act=billsearch">Đơn hàng</a></li>
+
                 <li><a href="index.php?act=dsbl">Bình luận</a></li>
                 <li><a href="index.php?act=thongke">Thông kê</a></li> 
             </ul>

@@ -13,10 +13,14 @@
                 <div class="row1">
                     Tài khoản
                     <input type="text" name="user_name" placeholder="Vui lòng nhập tài khoản">
+                    <span style="color: red;"><?= $errUsername ?></span>
+
                 </div>
                 <div class="row1">
                     Mật khẩu
-                    <input type="password" name="pass">
+                    <input type="password" name="pass" placeholder="Vui lòng nhập mật khẩu">
+                    <span style="color: red;"><?= $errPassword  ?></span>
+
                 </div>
                 <div class="button1">
                     <input type="submit" value="Đăng nhập" name="dangnhap">

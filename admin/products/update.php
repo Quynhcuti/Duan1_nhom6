@@ -8,7 +8,7 @@
 
 <div class="row">
     <div class="row-frmtitle">
-        <H1>THEM MOI SAN PHAM</H1>
+        <H1>CẬP NHẬT SẢN PHẨM</H1>
     </div>
     <?php
         // echo "<pre>";

@@ -1,10 +1,10 @@
 <?php
-    // session_start();
-    include "../model/pdo.php";
-    include "../model/binhluan.php";
-    $user_id=$_SESSION["user"]["comment_id"];
-    $product_id=$_REQUEST["product_id"];
-    $dsbl=load_all_binhluan($comment_id);
+    session_start();
+    include "../../model/pdo.php";
+    include "../../model/binhluan.php";
+    // $user_id=$_SESSION["user"]["comment_id"];
+    // $product_id=$_REQUEST["product_id"];
+    $dsbl=load_all_binhluan($product_id);
 ?>  
 
 <!DOCTYPE html>

@@ -37,8 +37,8 @@
                                <td><input type="checkbox"></td>
                                <td>'.$comment_id.'</td>
                                <td>'.$content.'</td>
-                               <td>'.$user_id.'</td>
-                               <td>'.$product_id.'</td>
+                               <td>'.$id_user.'</td>
+                               <td>'.$id_product.'</td>
                                <td>'.$create_at.'</td>
                                <td><a href="'.$delBL.'" ><input onclick="return confirmDelete();" type="button" value="Xóa"></a> </td>
                                

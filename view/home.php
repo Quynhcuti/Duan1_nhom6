@@ -40,7 +40,7 @@
             <div class="spmoi">
               <img
                 src="img/z5233287385840_af0ae845f139d8e8883ee281db061f34.jpg"
-                style="width: 554px; height: 400px"
+                style="width: 540px; height: 500px"
                 alt=""
               />
               <h2>Hàng mới</h2>
@@ -49,8 +49,8 @@
             </div>
             <div class="phukien">
               <img
-                src="img/z5233286961091_0b87810e801dab8fc275b5969f593e02.jpg"
-                style="width: 554px; height: 400px"
+                src="img/z5233287033176_490f4c0b979b2936c652e34ed5810d48.jpg"
+                style="width: 540px; height: 500px"
                 alt=""
               />
               <h2>Phụ kiện</h2>
@@ -69,11 +69,12 @@
                   echo '
                   <div class="sp">
                       <img
-                      src="img/z5233286981373_5733bb8d00b68e832cd935c2a43f6ae5.jpg"
+                      src="img/z5233287464498_5c65b0b3181dfc132dfeb379fc828196.jpg"
                       style="width: 330px; height: 330px"
                       alt=""
                     />
-                    <h3>'.$category_name.'</h3>
+                    <a href="index.php?act=sanphamsearch"><h4>'.$category_name.'</h4></a>
+                    
                   </div>  
                   ';
                 }
@@ -106,7 +107,7 @@
             </div> -->
           
           <div class="top10sp">
-            <h2>Sản phẩm bán chạy</h2>
+            <h2>Sản phẩm</h2>
             <div class="product">
             <?php 
                 foreach($listprotop4 as $sp){

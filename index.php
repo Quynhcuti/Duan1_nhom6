@@ -60,43 +60,125 @@
                     include "view/home.php";
                 }
                 break;
-            case 'dangky':
-                # code...
-                if(isset($_POST['dangki']) && ($_POST['dangki'])){
-                    $fullname = $_POST['fullname'];
-                    $username = $_POST['username'];
-                    $password = $_POST['password'];
-                    $phone = $_POST['phone'];
-                    // print_r([$fullname,$username,$password,$phone]);
-                    $checkname = check_username($username);
-                    // print_r($checkname);
-                    // die();
-                    if(is_array($checkname)){
-                        // echo $checkname['user_name'];
-                        // $soluong = rowCount($checkname);
-                        // echo $soluong;
-                        // print_r($checkname);
-                        // nếu giá trị có tồn tại thì
-                        if(isset($username)){
-                            echo $username;
-                            $thongbao = "tên user đã được sử dụng";
-                            
-                        }else{
-                            
-                            // register($username,$password,$fullname,$phone);
-                            $thongbao = "đăng kí thành công";
-
+                case 'dangky':
+                    # code...
+                    $fullname = '';
+                    $username = '';
+                    $password = '';
+                    $phone = '';
+    
+                    $errFullname = '';
+                    $errUsername = '';
+                    $errPassword = '';
+                    $errPhone = '';  
+    
+                    if(isset($_POST['dangki'])){
+                        $fullname = $_POST['fullname'];
+                        $username = $_POST['username'];
+                        $password = $_POST['password'];
+                        $phone = $_POST['phone'];
+                        // print_r([$fullname,$username,$password,$phone]);
+                        // die();
+                        $isCheck = true ;
+                        
+                        if(!$fullname){
+                            $isCheck = false;
+                            $errFullname = "Bạn không được bỏ trống họ tên";
                         }
+    
+                        if(!$username){
+                            $isCheck = false;
+                            $errUsername = "Bạn không được bỏ trống tài khoản";
+                        }
+    
+                        if(!$password){
+                            $isCheck = false;
+                            $errPassword = "Bạn không được bỏ trống password";
+                        }
+    
+                        if(!$phone){
+                            $isCheck = false;
+                            $errPhone = "Bạn không được bỏ trống số điện thoại";
+                        }
+    
+                        if($isCheck){
+                            $checkname = check_username($username);
+                            // print_r($checkname);
+                            // die();
+                            if(is_array($checkname)){
+                                // echo "tên không sử dụng được";
+                                $thongbao = "tên user đã được sử dụng";
+                                // nếu giá trị có tồn tại thì
+                                // if(isset($username)){
+                                //     // echo $username;
+                                //     // die();
+                                //     // $thongbao = "tên user đã được sử dụng";
+                                //     echo "tên không sử dụng được";
+                                // }else{
+                                //     // echo $username;
+                                //     // die();
+                                //     // insert_user($username,$password,$fullname,$phone,'0');
+                                //     // $thongbao1 = "đăng kí thành công";
+                                //     echo "tên có thể sử dụng được";
+                                // }
+                            }else{
+                                // echo "tên  sử dụng được";
+                                insert_user($username,$password,$fullname,$phone,'0');
+                                    $thongbao1 = "đăng kí thành công";
+                                    
+    
+                            }
+                            // header('Location: index.php');
+                            // insert_user($username,$password,$fullname,$phone,'0');
+                            // header('Location: index.php');
+                        }
+    
+                        
                     }
-                    // die();
-                    // register($username,$password,$fullname,$phone);
+                    include "view/register.php";
+                    break;
+                case 'dangnhap':
+                    # code...
+                    $fullname = '';
                     
-                    // die();
-                }
-                include "view/register.php";
-                break;
-            
-            case 'dangnhap':
+                    $password = '';
+                    
+    
+                    
+                    $errUsername = '';
+                    $errPassword = '';
+                    if(isset($_POST['dangnhap']) && ($_POST['dangnhap'])){
+                        
+                        $username = $_POST['user_name'];
+                        $password = $_POST['pass'];
+                        $isCheck = true ;
+                        
+                        if(!$username){
+                            $isCheck = false;
+                            $errUsername = "Bạn không được bỏ trống tài khoản";
+                        }
+    
+                        if(!$password){
+                            $isCheck = false;
+                            $errPassword = "Bạn không được bỏ trống password";
+                        }
+                        // print_r($_POST);
+                        // die();
+                        if($isCheck){
+                            $check_user = check_user($username,$password);
+                            if(is_array($check_user)){
+    
+                                $_SESSION['user'] = $check_user;
+                                header('Location: index.php');
+                            }else{
+                                $thongbao = "User name và password không chính xác";
+                            }
+                        }
+                        
+                        // die();
+                    }
+                    include "view/signin.php";
+                    break;
                 # code...
                 if(isset($_POST['dangnhap']) && ($_POST['dangnhap'])){
                     
@@ -230,7 +312,7 @@
                     $ngaydh = date('Y-m-d');
                     // die();
     
-                    print_r($_POST);
+                    // print_r($_POST);
                     // die();
                     if(isset($_SESSION['user'])){
                         $billid_user = insert_bill($name,$address,$phone,$price,$payement,'0',$ngaydh,$_SESSION['user']['user_id']);

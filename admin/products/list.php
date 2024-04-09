@@ -44,7 +44,9 @@
                 ?>
                 
             </table>
+            <a href="index.php?act=addpro"><input type="button" value="Nhập thêm" /></a>
         </div>
+        
     </div>
 </div>
 

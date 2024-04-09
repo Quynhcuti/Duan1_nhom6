@@ -58,12 +58,14 @@
     function loadAll_bill($phone = ""){
         $sql = "SELECT * FROM  bill WHERE 1";
         if($phone != ""){
-            $sql .= " and phone = '$phone' ";
+            $sql .= " and phone = '$phone'";
         }
+
         $bill = pdo_query($sql);
         return $bill;
     }
 
+    
     function bill_detail_User_id($id){
         $sql = "SELECT bill_id, price_detail, quantity_detail, image, product_name, status, payment, create_at, address, fullname, phone FROM  bill_detail INNER JOIN bill ON bill_detail.id_bill = bill.bill_id INNER JOIN products ON bill_detail.product_id_bill_detail = products.product_id WHERE user_id_bill = '$id'";
         // echo '<pre>';
@@ -73,5 +75,26 @@
         // die();
         $bill = pdo_query($sql);
         return $bill;
+    }
+
+    function bill_detail_By_bill_id($id){
+        $sql = "SELECT bill_detail.bill_detail_id, products.product_name, bill_detail.price_detail, bill_detail.quantity_detail, bill.status FROM  bill_detail INNER JOIN bill ON bill_detail.id_bill = bill.bill_id INNER JOIN products ON bill_detail.product_id_bill_detail = products.product_id WHERE id_bill = '$id'";
+        // echo '<pre>';
+        // echo $sql;
+        // echo '</pre>';
+
+        // die();
+        $bill = pdo_query($sql);
+        return $bill;
+    }
+
+    // function update_status_bill($status,$id){
+    //     $sql = "UPDATE bill SET status = '$status' WHERE bill_id IN ( SELECT id_bill FROM bill_detail where id_bill = '$id' ) ";
+    //     pdo_execute($sql);
+    // }
+
+    function update_status($status,$id){
+        $sql = "UPDATE bill SET status = '$status'  WHERE bill_id = '$id'";
+        pdo_execute($sql);
     }
 ?>

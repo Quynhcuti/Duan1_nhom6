@@ -4,7 +4,7 @@
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   padding: 0;
 }
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ body{
   float: left;
   width: 100%;
 }
-.mb{
+.mb {
   margin-bottom: 10px;
 }
 header {
@@ -29,6 +29,7 @@ header {
   width: 80%;
   height: 135px;
   align-items: center;
+  /* border-top: 0.5px rgb(129, 126, 126) solid; */
   /* border: 1px solid red; */
 }
 
@@ -480,8 +481,10 @@ footer .row-1 .logo img {
   display: flex;
 }
 
-.box-dmsp .sp > h3 {
-  font-size: 48px;
+.box-dmsp .sp > a {
+  font-size: 22px;
+  color: black;
+  text-decoration: none;
   text-align: center;
 }
 
@@ -1208,30 +1211,24 @@ footer .row-1 .logo img {
 /* dang ki */
 .boxcontent {
   padding: 20px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 30%;
   height: auto;
 }
 .boxcontent-mybill {
   padding: 20px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 80%;
   display: flex;
 }
 .boxcontent-billdetail {
   padding: 20px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 80%;
   display: flex;
   flex-direction: column;
 }
-.boxcontent_billconfirm {
-  padding: 20px;
-  border: 1px solid black;
-  width: 80%;
-  display: flex;
-  /* flex-direction: column; */
-}
+
 .row1 {
   width: 100%;
   margin-bottom: 30px;
@@ -1305,7 +1302,6 @@ footer .row-1 .logo img {
   opacity: 2;
 }
 
-
 /* viewbill */
 .form_content {
   background-color: #edf0f5;
@@ -1367,8 +1363,6 @@ footer .row-1 .logo img {
   background-color: #c0336e;
   color: white;
 }
-
-
 
 /* billdetail */
 
@@ -1447,7 +1441,6 @@ footer .row-1 .logo img {
   padding: 30px;
 }
 .contents_button1 button {
-  
   padding: 10px;
   border: 1px solid red;
   background-color: white;
@@ -1455,7 +1448,7 @@ footer .row-1 .logo img {
   opacity: 0.7;
   transition: 0.3s;
 }
-.contents_button button:hover {
+.contents_button1 button:hover {
   opacity: 2;
   background-color: #c0336e;
   color: white;
@@ -1471,4 +1464,81 @@ footer .row-1 .logo img {
   margin-left: 10px;
   font-size: 22px;
   margin-right: 400px;
+}
+.payment input {
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+.boxcontent-thanhtoan {
+  padding: 20px;
+  /* border: 1px solid black; */
+  width: 80%;
+  /* display: flex; */
+}
+.form-signin1 {
+  width: 40%;
+}
+
+/* billconfirm */
+.boxcontent-billcofirm {
+  padding: 20px;
+  /* border: 1px solid black; */
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  padding: 10px;
+  border: 1px solid black;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.box-giohang1 {
+  width: 100%;
+
+  margin-top: 29px;
+  /* display: block; */
+}
+
+.box-giohang1 > h2 {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #cacaca;
+  
+}
+
+.box-giohang1 table {
+  margin-top: 66px;
+  width: 1066px;
+  height: auto;
+  border-collapse: collapse;
+  margin-bottom: 42px;
+}
+
+.box-giohang1 table th {
+  border-bottom: 1px solid #cacaca;
+}
+
+.box-giohang1 table tr td img {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.box-giohang1 table th:nth-child(2) {
+  width: 25%;
+}
+
+.box-giohang1 table th:nth-child(3) {
+  width: 20%;
+}
+
+.box-giohang1 table th:nth-child(4) {
+  width: 20%;
+}
+.box-giohang1 table td {
+  text-align: center;
 }

@@ -1,58 +1,86 @@
-
+    
     <div class="boxcontent-billdetail">
-        <div class="row">
-            <div class="mb title-ctdh">
-                <div class="title-ctdh_dh">
-                    Chi tiết đơn hàng # 9234723498192473
-                </div>
-                <div class="title-ctdh_nh">
-                    - Đã nhận hàng
-                </div>
-                <div class="title-ctdh_data">
-                    Đặt lúc: 15:24 Thứ Bảy, 4/4/2024 
-                </div>
-            </div>
-        </div>
-        <div class="row mb20">
-            <div class="contents_info_vch">
-                <div class="contents_info">
-                    <p>THÔNG TIN NHẬN HÀNG</p>
-                    <p>Người nhận: </p>
-                    <p>Nhận tại: </p>
-                    <p>Nhận lúc: </p>
-                </div>
-                <div class="contents_vch">
-                    <p>HÌNH THỨC THANH TOÁN</p>
-                    <label for="age1">Trả tiền khi nhận hàng</label><br>
-                    <label for="age2">Chuyển khoản ngân hàng</label><br>  
-                    <label for="age3">Thanh toán online</label bel><br><br>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="row form_content">
+        <?php
 
-                    <div class="form_content-bill">
-                        <div class=" mb title">
-                            <div class=" mb title-left">
-                                Thông tin sản phẩm
-                            </div>
+
+            $tong = 0;
+            foreach ($listBill as $bill) {
+                extract($bill);
+                $tong = $bill['price_detail'] * $bill['quantity_detail'];
+            }
+                 
+            echo'
+                <div class="row">
+                    <div class="mb title-ctdh">
+                        <div class="title-ctdh_dh">
+                            Chi tiết đơn hàng #'.$bill['bill_id'].'
                         </div>
-                            <div class="contents1">
-                                <div class="contents_img"><img style="width:125px; height:125px;" src="../view/img/z5233286858726_b91d1d324d3c8ac3695ea5afe4c099c6.jpg" alt=""></div>
-                                <div class="content_ten_sl">
-                                    <div class="mb contents_tensp1">Tên sản phẩm</div>
-                                    <div class="contents_sl">Số lượng: 1</div>
-                                </div>
-                                <div class="contents_tt">Tổng tiền: 1.000.000 <sup>đ</sup></div>
+                        <div class="title-ctdh_nh">
+                            - '.($bill['status'] == 0 ? 'Đơn hàng mới' : ($bill['status'] == 1 ? 'Đang sử lý' : ($bill['status'] == 2 ? 'Đang giao hàng' : 'Đã nhận '))).'
                         </div>
-                        <div class="contents_button1">
-                            <a href="index.php?act=viewbill"><button>Trở về trang danh sách đơn hàng</button></a>
+                        <div class="title-ctdh_data">
+                            Đặt lúc: '.$bill['create_at'].' 
                         </div>
                     </div>
-                    </form>
+                </div>    
+            ';            
+        ?>
+
+        <?php
+            extract($bill);
+
+            echo'
+                <div class="row mb20">
+                    <div class="contents_info_vch">
+                    <div class="contents_info">
+                        <p>THÔNG TIN NHẬN HÀNG</p>
+                        <p>Người nhận:      '.$bill['fullname'].' </p>
+                        <p>Nhận tại:      '.$bill['address'].'</p>
+                        <p>Nhận lúc:      '.$bill['create_at'].'</p>
+                    </div>
+                    <div class="contents_vch">
+                        <p>HÌNH THỨC THANH TOÁN</p>
+                        <label for="age1">'.($bill['payment'] == 1 ? 'Trả tiền khi nhận hàng' : ($bill['payment'] == 2 ? 'Chuyển khoản ngân hàng' : 'Thanh toán online')).'</label><br>
+                    </div>
+                    </div>
                 </div>
-        </div>
+            
+            ';
+            
+        ?>
+        
+        <?php
+            $tong = 0;
+            extract($bill);
+            $tong = $bill['quantity_detail'] * $bill['price_detail'];
+
+            echo'
+                <div class="row">
+                    <div class="row form_content">
+                        <div class="form_content-bill">
+                            <div class=" mb title">
+                                <div class=" mb title-left">
+                                    Thông tin sản phẩm
+                                </div>
+                            </div>
+                                <div class="contents1">
+                                    <div class="contents_img"><img style="width:125px; height:125px;" src="uploads/'.$bill['image'].'" alt=""></div>
+                                    <div class="content_ten_sl">
+                                        <div class="mb contents_tensp1">'.$bill['product_name'].'</div>
+                                        <div class="contents_sl">Số lượng: '.$bill['quantity_detail'].'</div>
+                                    </div>
+                                    <div class="contents_tt">Tổng tiền:'.$tong.'<sup>đ</sup></div>
+                            </div>
+                            <div class="contents_button1">
+                                <a href="index.php?act=mybill"><button>Trở về trang danh sách đơn hàng</button></a>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>    
+            ';
+        ?>
+        
     </div>
 
 
